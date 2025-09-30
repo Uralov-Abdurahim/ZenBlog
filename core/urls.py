@@ -1,10 +1,20 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls.i18n import i18n_patterns
+
+
+urlpatterns = i18n_patterns(
+    path('admin/', admin.site.urls),
+    path('', include('About.urls'))
+#    path('', views.home, name='home'),
+#   path('about/', views.about, name='about'),
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('About.urls'))
 ]
 
 

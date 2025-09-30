@@ -99,6 +99,18 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
+LANGUAGE_CODE = 'uz'
+
+LANGUAGES = [
+    ('en', 'English'),
+    ('uz', 'Uzbek'),
+    ('ru', 'Russian'),
+]
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
+
 USE_TZ = True
 
 
