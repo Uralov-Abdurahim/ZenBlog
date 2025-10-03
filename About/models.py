@@ -8,6 +8,9 @@ class AboutModel(models.Model):
     function1 = models.CharField(max_length=150, verbose_name=_('function1'))
     function2 = models.CharField(max_length=150, verbose_name=_('function2'), null=True, blank=True)
 
+    class Meta:
+        verbose_name = _('About')
+        verbose_name_plural = _('Abouts')
 
 class Team(models.Model):
     image =  models.ImageField(upload_to='About/Team/%Y/%m/%d', verbose_name=_('image'), null=True, blank=True)
@@ -20,3 +23,6 @@ class Team(models.Model):
     Linkedin_link = models.URLField(verbose_name=_('Linkedin link'), null=True, blank=True)
 
 
+    class Meta:
+        verbose_name = _('Team')
+        verbose_name_plural = _('Teams')

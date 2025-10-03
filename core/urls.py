@@ -7,14 +7,16 @@ from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
-    path('', include('About.urls'))
+    path('', include('About.urls')),
+    path('', include('Category.urls'))
 #    path('', views.home, name='home'),
 #   path('about/', views.about, name='about'),
 )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('About.urls'))
+    path('', include('About.urls')),
+    path('', include('Category.urls'))
 ]
 
 
