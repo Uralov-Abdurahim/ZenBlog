@@ -19,6 +19,8 @@ class CategoryDetailView(DetailView):
     template_name = "single-post.html"
     context_object_name = "post"
 
+
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["comments"] = self.object.comments.all().order_by('-created_at')
@@ -34,6 +36,12 @@ class CategoryDetailView(DetailView):
             comment.user = request.user
             comment.save()
         return redirect("category_detail", pk=self.object.pk)
+    
+    def get_object(self, queryset=None):
+        post = super().get_object(queryset)
+        post.views += 1       # 🔥 Ko‘rishlar sonini oshirish
+        post.save(update_fields=['views'])
+        return post
 
 
 class TagBlogListView(ListView):

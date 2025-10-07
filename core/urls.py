@@ -9,7 +9,8 @@ urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
     path('', include('About.urls')),
     path('', include('Category.urls')),
-    path('', include('Contact.urls'))
+    path('', include('Contact.urls')),
+    path('', include('Home.urls'))
 #    path('', views.home, name='home'),
 #   path('about/', views.about, name='about'),
 )
@@ -18,7 +19,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('About.urls')),
     path('', include('Category.urls')),
-    path('', include('Contact.urls'))
+    path('', include('Contact.urls')),
+    path('', include('Home.urls'))
 ]
 
 

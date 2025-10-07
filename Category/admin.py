@@ -1,13 +1,19 @@
 from django.contrib import admin
 from Category.models import CategoryModel, Comment, Tag
 from django.utils.text import Truncator
+from django.utils.html import format_html
 
 @admin.register(CategoryModel)
 class CategroyAdmin(admin.ModelAdmin):
-    list_display = ('image', 'short_title', 'author','short_sub_title', 'second_short_title', 'Text', 'created_at', 'updated_at', 'get_tag')
-    list_display_links = ('image', 'short_title', 'author', 'short_sub_title', 'second_short_title', 'Text', 'created_at', 'updated_at', 'get_tag')
+    list_display = ('image_tag', 'short_title', 'author','short_sub_title', 'second_short_title', 'Text', 'created_at', 'updated_at', 'get_tag', 'views')
+    list_display_links = ('image_tag', 'short_title', 'author', 'short_sub_title', 'second_short_title', 'Text', 'created_at', 'updated_at', 'get_tag', 'views')
     search_fields = ('title', 'author', 'created_at', 'get_tags')
-    list_filter = ('title', 'author', 'created_at', 'tag')
+    list_filter = ('title', 'author', 'created_at', 'tag', 'views')
+
+    def image_tag(self, obj):
+        if obj.image:
+            return format_html('<img src="{}" width="80" height="60" style="object-fit: cover;" />', obj.image.url)
+        return "No Image"
 
     def short_sub_title(self, obj):
         return Truncator(obj.sub_title).chars(30)  # faqat 30 ta belgigacha
