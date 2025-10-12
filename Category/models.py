@@ -24,6 +24,7 @@ class CategoryModel(TimeStampedModel):
     tag = models.ManyToManyField(Tag, related_name='blogs', blank=True, verbose_name=_('tag'))
     featured = models.BooleanField(default=False)
     views = models.PositiveIntegerField(default=0)
+    special = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title

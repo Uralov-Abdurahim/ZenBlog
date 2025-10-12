@@ -13,4 +13,5 @@ class HomeListView(ListView):
         context['featured_post'] = CategoryModel.objects.filter(featured=True)
         context['recent_posts'] = CategoryModel.objects.filter(featured=False).order_by('-created_at')[:6]
         context['trending_posts'] = CategoryModel.objects.order_by('-views')[:5]  # 🔥 Eng ko‘p ko‘rilgan 5 ta post
+        context['special'] = CategoryModel.objects.filter(special=True)
         return context
