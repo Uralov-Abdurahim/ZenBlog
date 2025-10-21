@@ -15,3 +15,10 @@ class HomeListView(ListView):
         context['trending_posts'] = CategoryModel.objects.order_by('-views')[:5]  # 🔥 Eng ko‘p ko‘rilgan 5 ta post
         context['special'] = CategoryModel.objects.filter(special=True)
         return context
+
+def privacy_policy(request):
+    return render(request, 'privacy_policy.html')
+
+
+def terms_of_use(request):
+    return render(request, 'terms_of_use.html')

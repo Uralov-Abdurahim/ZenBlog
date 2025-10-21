@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +28,21 @@
   <!-- Main CSS File -->
   <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
 
-  
+  <style>
+    .lang-form select {
+        background-color: #f5f5f5;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 6px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s;
+    }
+    .lang-form select:hover {
+        background-color: #e8e8e8;
+    }
+    </style>
   <!-- =======================================================
   * Template Name: ZenBlog
   * Template URL: https://bootstrapmade.com/zenblog-bootstrap-blog-template/
@@ -35,6 +50,7 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  
 </head>
 
 <body class="about-page">
@@ -50,31 +66,29 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="single-post.html">Single Post</a></li>
-          <li class="dropdown"><a href="#"><span>Categories</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="category.html">Category 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="category.html">Category 2</a></li>
-              <li><a href="category.html">Category 3</a></li>
-              <li><a href="category.html">Category 4</a></li>
+          <li><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+          <li><a href="{% url 'About:About' %}" class="active">{% trans 'About' %}</a></li>
+          <a href="{% url 'category' %}"><span>{% trans 'Categories' %}</span></a>
+        </li>
+        <li><a href="{% url 'contact' %}">{% trans 'Contact' %}</a></li>
+      
             </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+          
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
+      <form action="{% url 'set_language' %}" method="post",  class="lang-form">
+        {% csrf_token %}
+        <input name="next" type="hidden" value="{{ redirect_to }}">
+        <select name="language" onchange="this.form.submit()">
+            <option value="ru" {% if  request.LANGUAGE_CODE == 'ru' %}selected{% endif %}>Русский</option>
+            <option value="uz" {% if  request.LANGUAGE_CODE == 'uz' %}selected{% endif %}>O‘zbekcha</option>
+            <option value="en" {% if  request.LANGUAGE_CODE == 'en' %}selected{% endif %}> English</option>
+            
+        </select>
+        
+    </form>
+    
       <div class="header-social-links">
         <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -117,44 +131,21 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">{% trans 'Home' %}</a></li>
+            <li><a href="#">{% trans 'About us' %}</a></li>
+            <li><a href="{% url 'terms_of_use' %}">{% trans 'Terms of service' %}</a></li>
+            <li><a href="{% url 'privacy_policy' %}">{% trans 'Privacy policy' %}</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
+          <h4>{% trans 'Our Services' %}</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Hic solutasetp</h4>
-          <ul>
-            <li><a href="#">Molestiae accusamus iure</a></li>
-            <li><a href="#">Excepturi dignissimos</a></li>
-            <li><a href="#">Suscipit distinctio</a></li>
-            <li><a href="#">Dilecta</a></li>
-            <li><a href="#">Sit quas consectetur</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Nobis illum</h4>
-          <ul>
-            <li><a href="#">Ipsam</a></li>
-            <li><a href="#">Laudantium dolorum</a></li>
-            <li><a href="#">Dinera</a></li>
-            <li><a href="#">Trodelas</a></li>
-            <li><a href="#">Flexo</a></li>
+            <li><a href="#">{% trans 'Web Design' %}</a></li>
+            <li><a href="#">{% trans 'Web Development' %}</a></li>
+            <li><a href="#">{% trans 'Product Management' %}</a></li>
+            <li><a href="#">{% trans 'Marketing' %}</a></li>
+            <li><a href="#">{% trans 'Graphic Design' %}</a></li>
           </ul>
         </div>
 
@@ -162,16 +153,8 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">ZenBlog</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon
-      </div>
+      <p>© <span>{% trans 'Copyright' %}</span> <strong class="px-1 sitename">ZenBlog</strong> <span>{% trans 'All Rights Reserved' %}</span></p>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->

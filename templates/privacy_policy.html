@@ -1,0 +1,28 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+{% block content %}
+<div class="container mt-5 mb-5">
+    <div class="card shadow-sm p-4 border-0" style="border-radius: 16px;">
+    <h1 class="mb-4 text-3xl font-semibold">{% trans "Privacy Policy" %}</h1>
+    <div style="line-height: 1.7; font-size: 17px; color: #333; max-width: 900px;">
+        <p>{% trans "We are committed to protecting the personal information of our users." %}</p>
+
+        <p>{% trans "This policy explains what information we collect about you, how we store it, and for what purposes we use it." %}</p>
+
+        <h4 class="mt-4">{% trans "1. Gather information" %}</h4>
+        <p>{% trans "We only collect the information you provide when you register or contact us (name, email, message)." %}</p>
+
+        <h4 class="mt-4">{% trans "2. Use of data" %}</h4>
+        <p>{% trans "This information is used only to improve the quality of service, communicate with you, and perform statistical analysis." %}</p>
+
+        <h4 class="mt-4">{% trans "3. Data protection" %}</h4>
+        <p>{% trans "We do not share your information with third parties and take steps to keep it secure." %}</p>
+
+        <h4 class="mt-4">{% trans "4. Cookies" %}</h4>
+        <p>{% trans "Our site uses cookies to improve your experience. You can disable them in your browser settings." %}</p>
+
+        <h4 class="mt-4">{% trans "5. Communication" %}</h4>
+        <p>{% trans "If you have any questions about our privacy policy, please contact us" %}</p>
+    </div>
+</div>
+{% endblock %}

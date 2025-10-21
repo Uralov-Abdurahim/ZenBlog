@@ -1,0 +1,31 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+{% block content %}
+<div class="container mt-5 mb-5">
+  <div class="card shadow-sm p-4 border-0" style="border-radius: 16px;">
+    <h1 class="mb-4 text-3xl font-semibold">{% trans "Terms of Use" %}</h1>
+
+    <div style="line-height: 1.7; font-size: 17px; color: #333; max-width: 900px;">
+      <p>{% trans "By using this website, you agree to the following terms:" %}</p>
+
+      <h4 class="mt-4">{% trans "1. Copyright" %}</h4>
+      <p>{% trans "All materials on the site are protected by copyright. Unauthorized copying, distribution, or commercial use of the content is prohibited." %}</p>
+
+      <h4 class="mt-4">{% trans "2. Terms of Use" %}</h4>
+      <p>{% trans "The user may use the site services only for lawful purposes. The user is responsible for any illegal or harmful actions." %}</p>
+
+      <h4 class="mt-4">{% trans "3. Accuracy of data" %}</h4>
+      <p>{% trans "We strive to keep the information on our site accurate and up-to-date, but we do not guarantee complete accuracy or currency." %}</p>
+
+      <h4 class="mt-4">{% trans "4. Limitation of Liability" %}</h4>
+      <p>{% trans "The site administration is not responsible for any damage resulting from the use of the service." %}</p>
+
+      <h4 class="mt-4">{% trans "5. Make changes" %}</h4>
+      <p>{% trans "The site administration reserves the right to change these terms of use at any time without prior notice." %}</p>
+
+      <h4 class="mt-4">{% trans "6. Communication" %}</h4>
+      <p>{% trans "If you have any questions about these terms, please contact us" %}</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

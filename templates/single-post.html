@@ -96,7 +96,7 @@
                 <div class="d-flex">
                   <div class="comment-img"><img src="assets/img/blog/comments-1.jpg" alt=""></div>
                   <div>
-                    <h5><a href="">{{ comment.user.username }}</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <h5><a href="">{{ comment.user.username }}</a></h5>
                     <time datetime="2020-01-01">{{ comment.created_at }}</time>
                     <p>
                       {{ comment.text }}
@@ -297,7 +297,7 @@
             <!-- Tags Widget -->
             <div class="tags-widget widget-item">
 
-              <h3 class="widget-title">Tags</h3>
+              <h3 class="widget-title">{% trans 'Tags' %}</h3>
               <ul>
                 <li><a href="#">App</a></li>
                 <li><a href="#">IT</a></li>

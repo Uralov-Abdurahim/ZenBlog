@@ -4,8 +4,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 
+urlpatterns = [
+    path('i18n/', include('django.conf.urls.i18n')),  # bu tilda o‘zgartirish uchun
+]
 
-urlpatterns = i18n_patterns(
+urlpatterns += i18n_patterns(
     path('admin/', admin.site.urls),
     path('', include('About.urls')),
     path('', include('Category.urls')),
@@ -16,14 +19,6 @@ urlpatterns = i18n_patterns(
 #   path('about/', views.about, name='about'),
 )
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('About.urls')),
-    path('', include('Category.urls')),
-    path('', include('Contact.urls')),
-    path('', include('Home.urls')),
-    path('', include('Register.urls'))
-]
 
 
 if settings.DEBUG:
