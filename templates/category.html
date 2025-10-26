@@ -44,7 +44,9 @@
                         </div>
                         <span class="px-3 text-black-50">/</span>
                         <div class="d-flex align-items-center">
-                          <i class="bi bi-folder2"></i> <span class="ps-2"></span>
+                          {% for tag in i.tag.all %}
+                          <i class="bi bi-folder2"></i> <span class="ps-2">{{tag.name}}</span>
+                          {% endfor %}
                         </div>
                       </div>
 
@@ -303,8 +305,8 @@
             <div class="search-widget widget-item">
 
               <h3 class="widget-title">Search</h3>
-              <form action="">
-                <input type="text">
+              <form method="get" action="{% url 'category_list' %}"  class="search-form mb-4">
+                <input type="text" name="q" value="{{ query }}">
                 <button type="submit" title="Search"><i class="bi bi-search"></i></button>
               </form>
 
@@ -360,10 +362,11 @@
             <!-- Tags Widget -->
             <div class="tags-widget widget-item">
 
-              {% for tags in categories %}
+              {% for category in categories %}
               <h3 class="widget-title">{% trans 'Tags' %}</h3>
+              {% for tag in category.tag.all %}
               <ul>
-                <li><a href="{% url 'tag_blogs' tags.pk %}">{{tags.post.all}}</a></li>
+                <li><a href="{% url 'tag_blogs' tag.pk %}">{{tag.name}}</a></li>
                 <li><a href="#">IT</a></li>
                 <li><a href="#">Business</a></li>
                 <li><a href="#">Mac</a></li>
@@ -375,6 +378,7 @@
                 <li><a href="#">Tips</a></li>
                 <li><a href="#">Marketing</a></li>
               </ul>
+              {% endfor %}
               {% endfor %}
 
             </div><!--/Tags Widget -->

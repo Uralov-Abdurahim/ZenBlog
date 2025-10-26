@@ -101,3 +101,8 @@ svg {
 .lang-flags .active {
     filter: drop-shadow(0 0 4px #555);
 }
+.loading,
+.error-message,
+.sent-message {
+  display: none;
+}

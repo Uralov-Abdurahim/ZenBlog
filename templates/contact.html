@@ -22,7 +22,7 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
-          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2066822.4583194647!2d69.94846155227866!3d41.11335263165084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38afbcaa73f2ce4d%3A0x57f19ae913e2f367!2sToshkent%20Viloyati!5e0!3m2!1suz!2s!4v1761471590989!5m2!1suz!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div><!-- End Google Maps -->
 
         <div class="row gy-4">
@@ -75,9 +75,13 @@
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">{% trans 'Loading' %}</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">{% trans 'Your message has been sent. Thank you!' %}</div>
+                  <div class="loading" style="display: none;">{% trans 'Loading' %}</div>
+                  {% if success %}
+                  <div class="sent-message" style="display:block;">
+                  {% trans 'Your message has been sent. Thank you!' %}
+                  </div>
+                  {% endif %}
+                 
 
                   <button type="submit">{% trans 'Send Message' %}</button>
                 </div>

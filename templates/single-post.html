@@ -15,6 +15,8 @@
       </div>
     </div><!-- End Page Title -->
 
+    
+
     <div class="container">
       <div class="row">
       
@@ -34,8 +36,8 @@
 
                 <div class="meta-top">
                   <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">{{i.author}}</a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2020-01-01">{{i.created_at|date:"d M Y"}}</time></a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">{{post.author}}</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2020-01-01">{{post.created_at|date:"d M Y"}}</time></a></li>
                     <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12 Comments</a></li>
                   </ul>
                 </div><!-- End meta top -->
@@ -68,7 +70,9 @@
                 <div class="meta-bottom">
                   <i class="bi bi-folder"></i>
                   <ul class="cats">
-                    <li><a href="#">{{post.tag}}</a></li>
+                    {% for posts in post.tag.all %}
+                    <li><a href="{% url 'tag_blogs' posts.pk %}">{{posts.name}}</a></li>
+                    {% endfor %}
                   </ul>
 
                   <i class="bi bi-tags"></i>

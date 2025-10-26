@@ -13,6 +13,12 @@ class CategoryListView(ListView):
     context_object_name = "categories"
     paginate_by = 6
 
+    def get_queryset(self):
+        queryset = CategoryModel.objects.all().order_by('-created_at')
+        query = self.request.GET.get('q')
+        if query:
+            queryset = queryset.filter(title__icontains=query)
+        return queryset
 
 class CategoryDetailView(DetailView):
     model = CategoryModel
@@ -47,7 +53,7 @@ class CategoryDetailView(DetailView):
 class TagBlogListView(ListView):
     model = CategoryModel
     template_name = "category.html"
-    context_object_name = "tag"
+    context_object_name = "categories"
 
     def get_queryset(self):
         return CategoryModel.objects.filter(tag__id=self.kwargs['pk']).order_by('-created_at')

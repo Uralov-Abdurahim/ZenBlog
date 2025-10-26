@@ -6,13 +6,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>About - ZenBlog Bootstrap Template</title>
+  <title>About - Lumera Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
-  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="{% static 'assets/img/favicon1.png' %}" rel="icon">
+  <link href="{% static 'assets/img/favicon1.png' %}" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="{% static 'https://fonts.googleapis.com' %}" rel="preconnect">
@@ -44,11 +44,8 @@
     }
     </style>
   <!-- =======================================================
-  * Template Name: ZenBlog
+  * Template Name: Lumera
   * Template URL: https://bootstrapmade.com/zenblog-bootstrap-blog-template/
-  * Updated: Aug 08 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
   ======================================================== -->
   
 </head>
@@ -58,10 +55,10 @@
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <a href="{% url 'home' %}" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">ZenBlog</h1>
+        <h1 class="sitename">Lumera</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -111,8 +108,8 @@
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">ZenBlog</span>
+          <a href="{% url 'home' %}" class="logo d-flex align-items-center">
+            <span class="sitename">Lumera</span>
           </a>
           <div class="footer-contact pt-3">
             <p>A108 Adam Street</p>
@@ -131,8 +128,8 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="#">{% trans 'Home' %}</a></li>
-            <li><a href="#">{% trans 'About us' %}</a></li>
+            <li><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+            <li><a href="{% url 'About:About' %}">{% trans 'About us' %}</a></li>
             <li><a href="{% url 'terms_of_use' %}">{% trans 'Terms of service' %}</a></li>
             <li><a href="{% url 'privacy_policy' %}">{% trans 'Privacy policy' %}</a></li>
           </ul>
@@ -153,7 +150,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>{% trans 'Copyright' %}</span> <strong class="px-1 sitename">ZenBlog</strong> <span>{% trans 'All Rights Reserved' %}</span></p>
+      <p>© <span>{% trans 'Copyright' %}</span> <strong class="px-1 sitename">Lumera</strong> <span>{% trans 'All Rights Reserved' %}</span></p>
     </div>
   </footer>
 

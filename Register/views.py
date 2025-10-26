@@ -27,8 +27,17 @@ def login_view(request):
         if user is not None:
             login(request, user)
             return redirect('home')  # Asosiy sahifaga yo‘naltiramiz
+
+
+        if user.is_superuser:
+            return redirect('/secure-admin-2374/')
+        elif user.is_staff:
+            return redirect('/secure-admin-2374/')
         else:
-            messages.error(request, "email yoki parol xato!")
+            return redirect('home')
+
+    else:
+        messages.error(request, "email yoki parol xato!")
 
     return render(request, 'login.html')
 
