@@ -2,15 +2,12 @@ from pathlib import Path
 import os
 from django.utils.translation import gettext_lazy as _
 from dotenv import load_dotenv
-
-load_dotenv()  # .env faylni o‘qish uchun
+  # .env faylni o‘qish uchun
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-load_dotenv(BASE_DIR / '.env')
+load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
