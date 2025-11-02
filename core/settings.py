@@ -22,7 +22,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['lumera-nkk9.onrender.com']
 
-
 # Application definition
 
 INSTALLED_APPS = [
