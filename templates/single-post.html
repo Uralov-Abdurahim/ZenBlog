@@ -8,7 +8,7 @@
         <h1 class="mb-2 mb-lg-0"></h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">{% trans 'Home' %}</a></li>
+            <li><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
             <li class="current">{% trans 'Single Post' %}</li>
           </ol>
         </nav>
@@ -94,7 +94,7 @@
 
             <div class="container">
 
-              <h4 class="comments-count">8 Comments</h4>
+              <h4 class="comments-count">{% trans 'Comments' %}</h4>
               {% for comment in comments %}
               <div id="comment-1" class="comment">
                 <div class="d-flex">
@@ -193,7 +193,7 @@
           <section id="comment-form" class="comment-form section">
             <div class="container">
                 <h4>{% trans 'Post Comment' %}</h4>
-                <p>Your email address will not be published. Required fields are marked * </p>
+                <p>{% trans 'Your email address will not be published. Required fields are marked *' %} </p>
                 {% if user.is_authenticated %}
                 <form method="post">
                   {% csrf_token %}

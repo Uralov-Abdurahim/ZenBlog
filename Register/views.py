@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from .forms import RegisterForm
+from django.utils.translation import gettext as _
 
 def register_view(request):
     if request.method == "POST":
@@ -25,19 +26,18 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
 
         if user is not None:
-            login(request, user)
-            return redirect('home')  # Asosiy sahifaga yo‘naltiramiz
+            login(request, user) # Asosiy sahifaga yo‘naltiramiz
 
 
-        if user.is_superuser:
-            return redirect('/secure-admin-2374/')
-        elif user.is_staff:
-            return redirect('/secure-admin-2374/')
+            if user.is_superuser:
+                return redirect('/system-control-8923/')
+            elif user.is_staff:
+                return redirect('/system-control-8923/')
+            else:
+                return redirect('home')
+
         else:
-            return redirect('home')
-
-    else:
-        messages.error(request, "email yoki parol xato!")
+            messages.error(request, _("Incorrect name or password!"))
 
     return render(request, 'login.html')
 

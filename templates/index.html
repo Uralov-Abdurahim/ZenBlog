@@ -103,7 +103,10 @@
                   <div class="post-entry">
                     {% for recent in recent_posts %}
                     <a href="{% url 'category_detail' recent.pk %}"><img src="{{recent.image.url}}" alt="" class="img-fluid"></a>
-                    <div class="post-meta"><span class="date">{{recent.tag}}</span> <span class="mx-1">•</span> <span>{{recent.created_at|date:"d M Y"}}</span></div>
+                    {% for tag in recent.tag.all %}
+                    <div class="post-meta"><span class="date">{{tag.name}}
+                    {% endfor %}
+                    </span> <span class="mx-1">•</span> <span>{{recent.created_at|date:"d M Y"}}</span></div>
                     <h2><a href="{% url 'category_detail' recent.pk %}">{{recent.title}}</a></h2>
                   </div>
                   {% endfor %}

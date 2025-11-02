@@ -25,11 +25,16 @@
                 <input autocomplete="one-time-code" type="password" id="password" name="password" placeholder="password" required >
             </label>
             <label class="form-row">
-                <input type="checkbox" id="subscribe" name="subscribe">{% trans ' I agree to the' %} <a href="" target="_blank">{% trans 'Terms and Conditions' %}</a>
+                <input type="checkbox" id="subscribe" name="subscribe">{% trans ' I agree to the' %} <a href="{% url 'terms_of_use' %}" target="_blank">{% trans 'Terms and Conditions' %}</a>
             </label>
             <div class="form-row">
                 <input type="submit" value="submit">
             </div>
+
+            <p style="text-align:center; margin-top: 10px;">
+                {% trans "Do you have an account?" %}
+                <a href="{% url 'login' %}">{% trans "Login" %}</a>
+            </p>
         </div>
     </form>
         <svg viewBox="0 0 1000 1000" stroke-linecap="round" stroke-linejoin="round">

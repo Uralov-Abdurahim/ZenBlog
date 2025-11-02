@@ -6,25 +6,43 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-12 18:58+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2025-10-28 16:23+0000\n"
+"PO-Revision-Date: 2025-10-28 21:28+0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.5\n"
 
 #: About/models.py:5 About/models.py:16 Category/models.py:18
 msgid "image"
 msgstr "изображение"
 
 #: About/models.py:6 Category/models.py:19
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:14
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:54
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:62
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:72
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:82
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:86
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:118
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:137
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:364
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:369
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:379
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:399
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:416
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:435
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:441
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:458
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:470
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:478
 msgid "title"
 msgstr "заголовок"
 
@@ -41,7 +59,7 @@ msgid "function2"
 msgstr "функция2"
 
 #: About/models.py:12 templates/about.html:8 templates/about.html:12
-#: templates/layouts/base.html:54
+#: templates/layouts/base.html:72
 msgid "About"
 msgstr "О нас"
 
@@ -89,8 +107,8 @@ msgstr "ярлык"
 msgid "Tag"
 msgstr "Ярлык"
 
-#: Category/models.py:14 templates/category.html:364
-#: templates/single-post.html:300
+#: Category/models.py:14 templates/category.html:336
+#: templates/single-post.html:304
 msgid "Tags"
 msgstr "Теги"
 
@@ -111,7 +129,7 @@ msgid "Category"
 msgstr "Категория"
 
 #: Category/models.py:34 templates/category.html:12
-#: templates/layouts/base.html:55
+#: templates/layouts/base.html:73
 msgid "Categories"
 msgstr "Категории"
 
@@ -131,7 +149,7 @@ msgstr "создано_at"
 msgid "Comment"
 msgstr "Комментарий"
 
-#: Category/models.py:50
+#: Category/models.py:50 templates/single-post.html:97
 msgid "Comments"
 msgstr "Комментарий"
 
@@ -164,7 +182,7 @@ msgid "message"
 msgstr "сообщение"
 
 #: Contact/models.py:25 templates/contact.html:9 templates/contact.html:13
-#: templates/layouts/base.html:57
+#: templates/layouts/base.html:75
 msgid "Contact"
 msgstr "Контакт"
 
@@ -172,20 +190,24 @@ msgstr "Контакт"
 msgid "Contacts"
 msgstr "Контакты"
 
-#: core/settings.py:112
+#: Register/views.py:40
+msgid "Incorrect name or password!"
+msgstr "Неверное имя или пароль!"
+
+#: core/settings.py:121
 msgid "English"
 msgstr "Английский"
 
-#: core/settings.py:113
-msgid "Uzbek"
-msgstr "узбекский"
-
-#: core/settings.py:114
+#: core/settings.py:122
 msgid "Russian"
 msgstr "Русский"
 
+#: core/settings.py:123
+msgid "Uzbek"
+msgstr "узбекский"
+
 #: templates/about.html:11 templates/category.html:11 templates/contact.html:12
-#: templates/layouts/base.html:53 templates/layouts/base.html:106
+#: templates/layouts/base.html:71 templates/layouts/base.html:149
 #: templates/single-post.html:11
 msgid "Home"
 msgstr "Главная"
@@ -194,31 +216,49 @@ msgstr "Главная"
 msgid "Who We Are"
 msgstr "Кто мы"
 
-#: templates/category.html:57
+#: templates/category.html:59
 msgid "Read More"
 msgstr "Читать далее"
 
-#: templates/contact.html:34
+#: templates/category.html:252
+msgid "Previous"
+msgstr "Предыдущий"
+
+#: templates/category.html:255
+msgid "Page"
+msgstr "Страница"
+
+#: templates/category.html:258
+msgid "Next"
+msgstr "Следующий"
+
+#: templates/category.html:307
+#, fuzzy
+#| msgid "March"
+msgid "Search"
+msgstr "Маршировать"
+
+#: templates/contact.html:36
 msgid "Address"
 msgstr "Адрес"
 
-#: templates/contact.html:42
+#: templates/contact.html:47
 msgid "Call Us"
 msgstr "Позвоните нам"
 
-#: templates/contact.html:50
+#: templates/contact.html:55
 msgid "Email Us"
 msgstr "Напишите нам"
 
-#: templates/contact.html:78
+#: templates/contact.html:84
 msgid "Loading"
 msgstr "Загрузка"
 
-#: templates/contact.html:80
+#: templates/contact.html:87
 msgid "Your message has been sent. Thank you!"
 msgstr "Ваше сообщение отправлено. Спасибо!"
 
-#: templates/contact.html:82
+#: templates/contact.html:92
 msgid "Send Message"
 msgstr "Отправить сообщение"
 
@@ -226,61 +266,156 @@ msgstr "Отправить сообщение"
 msgid "Trending"
 msgstr "В тренде"
 
-#: templates/layouts/base.html:107
+#: templates/layouts/base.html:100 templates/login.html:6
+#: templates/login.html:58 templates/register.html:36
+msgid "Login"
+msgstr "Авторизоваться"
+
+#: templates/layouts/base.html:101
+msgid "Register"
+msgstr "регистр"
+
+#: templates/layouts/base.html:135
+msgid "Phone"
+msgstr "номер телефона"
+
+#: templates/layouts/base.html:136
+#, fuzzy
+#| msgid "email"
+msgid "Email"
+msgstr "электронная почта"
+
+#: templates/layouts/base.html:147
+msgid "Useful Links"
+msgstr "Полезные ссылки"
+
+#: templates/layouts/base.html:150
 msgid "About us"
 msgstr "О нас"
 
-#: templates/layouts/base.html:108
+#: templates/layouts/base.html:151
 msgid "Terms of service"
 msgstr "Условия обслуживания"
 
-#: templates/layouts/base.html:109
+#: templates/layouts/base.html:152
 msgid "Privacy policy"
 msgstr "Политика конфиденциальности"
 
-#: templates/layouts/base.html:114
+#: templates/layouts/base.html:157
 msgid "Our Services"
 msgstr "Наши услуги"
 
-#: templates/layouts/base.html:116
+#: templates/layouts/base.html:159
 msgid "Web Design"
 msgstr "Веб-дизайн"
 
-#: templates/layouts/base.html:117
+#: templates/layouts/base.html:160
 msgid "Web Development"
 msgstr "Веб-разработка"
 
-#: templates/layouts/base.html:118
+#: templates/layouts/base.html:161
 msgid "Product Management"
 msgstr "Управление продуктом"
 
-#: templates/layouts/base.html:119
+#: templates/layouts/base.html:162
 msgid "Marketing"
 msgstr "Маркетинг"
 
-#: templates/layouts/base.html:120
+#: templates/layouts/base.html:163
 msgid "Graphic Design"
 msgstr "Графический дизайн"
 
-#: templates/layouts/base.html:128
+#: templates/layouts/base.html:171
 msgid "Copyright"
 msgstr "Авторские права"
 
-#: templates/layouts/base.html:128
+#: templates/layouts/base.html:171
 msgid "All Rights Reserved"
 msgstr "Все права защищены"
-
-#: templates/login.html:6 templates/login.html:58
-msgid "Login"
-msgstr "Авторизоваться"
 
 #: templates/login.html:37
 msgid "Member Login"
 msgstr "Вход для участников"
 
-#: templates/login.html:63
+#: templates/login.html:70
 msgid "Create your Account"
 msgstr "Создайте свою учетную запись"
+
+#: templates/privacy_policy.html:6
+#, fuzzy
+#| msgid "Privacy policy"
+msgid "Privacy Policy"
+msgstr "Политика конфиденциальности"
+
+#: templates/privacy_policy.html:8
+msgid "We are committed to protecting the personal information of our users."
+msgstr "Мы обязуемся защищать персональные данные наших пользователей."
+
+#: templates/privacy_policy.html:10
+msgid ""
+"This policy explains what information we collect about you, how we store it, "
+"and for what purposes we use it."
+msgstr ""
+"В этой политике объясняется, какую информацию о вас мы собираем, как мы ее "
+"храним и для каких целей мы ее используем."
+
+#: templates/privacy_policy.html:12
+msgid "1. Gather information"
+msgstr "1. Информация"
+
+#: templates/privacy_policy.html:13
+msgid ""
+"We only collect the information you provide when you register or contact us "
+"(name, email, message)."
+msgstr ""
+"Мы собираем только ту информацию, которую вы предоставляете при регистрации "
+"или обращении к нам (имя, адрес электронной почты, сообщение)."
+
+#: templates/privacy_policy.html:15
+msgid "2. Use of data"
+msgstr "2. Использование данных"
+
+#: templates/privacy_policy.html:16
+msgid ""
+"This information is used only to improve the quality of service, communicate "
+"with you, and perform statistical analysis."
+msgstr ""
+"Эта информация используется только для улучшения качества обслуживания, "
+"связи с вами и проведения статистического анализа."
+
+#: templates/privacy_policy.html:18
+msgid "3. Data protection"
+msgstr "3. Защита данных"
+
+#: templates/privacy_policy.html:19
+msgid ""
+"We do not share your information with third parties and take steps to keep "
+"it secure."
+msgstr ""
+"Мы не передаем вашу информацию третьим лицам и принимаем меры для ее "
+"безопасности."
+
+#: templates/privacy_policy.html:21
+msgid "4. Cookies"
+msgstr "4. Файлы cookie"
+
+#: templates/privacy_policy.html:22
+msgid ""
+"Our site uses cookies to improve your experience. You can disable them in "
+"your browser settings."
+msgstr ""
+"Наш сайт использует файлы cookie для улучшения вашего опыта. Вы можете "
+"отключить их в настройках браузера."
+
+#: templates/privacy_policy.html:24
+msgid "5. Communication"
+msgstr "5. Коммуникация"
+
+#: templates/privacy_policy.html:25
+msgid "If you have any questions about our privacy policy, please contact us"
+msgstr ""
+"Если у вас есть вопросы о нашей политике конфиденциальности, пожалуйста, "
+"свяжитесь с нами."
 
 #: templates/register.html:28
 msgid " I agree to the"
@@ -290,21 +425,112 @@ msgstr "Я согласен с"
 msgid "Terms and Conditions"
 msgstr "Условия и положения"
 
+#: templates/register.html:35
+msgid "Do you have an account?"
+msgstr "У вас есть аккаунт?"
+
 #: templates/single-post.html:12
 msgid "Single Post"
 msgstr "Один пост"
 
-#: templates/single-post.html:191 templates/single-post.html:197
+#: templates/single-post.html:195 templates/single-post.html:201
 msgid "Post Comment"
 msgstr "Оставить комментарий"
 
-#: templates/single-post.html:200
+#: templates/single-post.html:196
+msgid "Your email address will not be published. Required fields are marked *"
+msgstr ""
+"Ваш адрес электронной почты не будет опубликован. Обязательные поля отмечены "
+"*"
+
+#: templates/single-post.html:204
 msgid "login"
 msgstr "авторизоваться"
 
-#: templates/single-post.html:200
+#: templates/single-post.html:204
 msgid "to comment"
 msgstr "комментировать"
+
+#: templates/terms_of_use.html:6
+#, fuzzy
+#| msgid "Terms of service"
+msgid "Terms of Use"
+msgstr "Условия обслуживания"
+
+#: templates/terms_of_use.html:9
+msgid "By using this website, you agree to the following terms:"
+msgstr "Используя этот сайт, вы соглашаетесь со следующими условиями:"
+
+#: templates/terms_of_use.html:11
+msgid "1. Copyright"
+msgstr "1. Авторские права"
+
+#: templates/terms_of_use.html:12
+msgid ""
+"All materials on the site are protected by copyright. Unauthorized copying, "
+"distribution, or commercial use of the content is prohibited."
+msgstr ""
+"Все материалы сайта защищены авторским правом. Несанкционированное "
+"копирование, распространение или коммерческое использование контента "
+"запрещено."
+
+#: templates/terms_of_use.html:14
+msgid "2. Terms of Use"
+msgstr "2. Условия обслуживания"
+
+#: templates/terms_of_use.html:15
+msgid ""
+"The user may use the site services only for lawful purposes. The user is "
+"responsible for any illegal or harmful actions."
+msgstr ""
+"Пользователь имеет право использовать услуги сайта только в законных целях. "
+"Пользователь несет ответственность за любые незаконные или вредоносные "
+"действия."
+
+#: templates/terms_of_use.html:17
+msgid "3. Accuracy of data"
+msgstr "3. Точность данных"
+
+#: templates/terms_of_use.html:18
+msgid ""
+"We strive to keep the information on our site accurate and up-to-date, but "
+"we do not guarantee complete accuracy or currency."
+msgstr ""
+"Мы стремимся поддерживать точность и актуальность информации на нашем сайте, "
+"однако не гарантируем ее абсолютную точность или актуальность."
+
+#: templates/terms_of_use.html:20
+msgid "4. Limitation of Liability"
+msgstr "4. Ограничение ответственности"
+
+#: templates/terms_of_use.html:21
+msgid ""
+"The site administration is not responsible for any damage resulting from the "
+"use of the service."
+msgstr ""
+"Администрация сайта не несет ответственности за любой ущерб, возникший в "
+"результате использования сервиса."
+
+#: templates/terms_of_use.html:23
+msgid "5. Make changes"
+msgstr "5. Внесите изменения"
+
+#: templates/terms_of_use.html:24
+msgid ""
+"The site administration reserves the right to change these terms of use at "
+"any time without prior notice."
+msgstr ""
+"Администрация сайта оставляет за собой право изменять настоящие условия "
+"использования в любое время без предварительного уведомления."
+
+#: templates/terms_of_use.html:26
+msgid "6. Communication"
+msgstr "6. Коммуникация"
+
+#: templates/terms_of_use.html:27
+msgid "If you have any questions about these terms, please contact us"
+msgstr ""
+"Если у вас есть вопросы по этим условиям, пожалуйста, свяжитесь с нами."
 
 #: venv/lib/python3.10/site-packages/django/contrib/messages/apps.py:16
 msgid "Messages"
@@ -1543,4 +1769,46 @@ msgstr ""
 
 #: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:236
 msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:18
+msgid "password"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:245
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:264
+#, fuzzy
+#| msgid "title"
+msgid "title a"
+msgstr "заголовок"
+
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:249
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:275
+#, fuzzy
+#| msgid "title"
+msgid "title b"
+msgstr "заголовок"
+
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:253
+#, fuzzy
+#| msgid "title"
+msgid "title c"
+msgstr "заголовок"
+
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:257
+#, fuzzy
+#| msgid "title"
+msgid "title d"
+msgstr "заголовок"
+
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:380
+msgid "visits"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/translation.py:62
+msgid "Sorry, translation is not available."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/modeltranslation/widgets.py:32
+msgid "None"
 msgstr ""

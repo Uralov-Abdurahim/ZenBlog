@@ -6,23 +6,42 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-12 15:40+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2025-10-28 16:16+0000\n"
+"PO-Revision-Date: 2025-10-28 21:21+0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uz\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
 
 #: About/models.py:5 About/models.py:16 Category/models.py:18
 msgid "image"
 msgstr "rasm"
 
 #: About/models.py:6 Category/models.py:19
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:14
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:54
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:62
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:72
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:82
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:86
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:118
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:137
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:364
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:369
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:379
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:399
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:416
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:435
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:441
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:458
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:470
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:478
 msgid "title"
 msgstr "sarlavha"
 
@@ -39,7 +58,7 @@ msgid "function2"
 msgstr "ikkinchi funksiya"
 
 #: About/models.py:12 templates/about.html:8 templates/about.html:12
-#: templates/layouts/base.html:54
+#: templates/layouts/base.html:72
 msgid "About"
 msgstr "Loyiha haqida"
 
@@ -87,8 +106,8 @@ msgstr "teg"
 msgid "Tag"
 msgstr "Teg"
 
-#: Category/models.py:14 templates/category.html:364
-#: templates/single-post.html:300
+#: Category/models.py:14 templates/category.html:336
+#: templates/single-post.html:304
 msgid "Tags"
 msgstr "Teglar"
 
@@ -109,7 +128,7 @@ msgid "Category"
 msgstr "Bo'lim"
 
 #: Category/models.py:34 templates/category.html:12
-#: templates/layouts/base.html:55
+#: templates/layouts/base.html:73
 msgid "Categories"
 msgstr "Bo'limlar"
 
@@ -129,7 +148,7 @@ msgstr "yaratilgan vaqt"
 msgid "Comment"
 msgstr "Izoh"
 
-#: Category/models.py:50
+#: Category/models.py:50 templates/single-post.html:97
 msgid "Comments"
 msgstr "Izohlar"
 
@@ -162,7 +181,7 @@ msgid "message"
 msgstr "xabar"
 
 #: Contact/models.py:25 templates/contact.html:9 templates/contact.html:13
-#: templates/layouts/base.html:57
+#: templates/layouts/base.html:75
 msgid "Contact"
 msgstr "Aloqa"
 
@@ -170,20 +189,24 @@ msgstr "Aloqa"
 msgid "Contacts"
 msgstr "Aloqa"
 
-#: core/settings.py:112
+#: Register/views.py:40
+msgid "Incorrect name or password!"
+msgstr "Noto'g'ri ism yoki parol!"
+
+#: core/settings.py:121
 msgid "English"
 msgstr "Ingliz"
 
-#: core/settings.py:113
-msgid "Uzbek"
-msgstr "O'zbek"
-
-#: core/settings.py:114
+#: core/settings.py:122
 msgid "Russian"
 msgstr "Rus"
 
+#: core/settings.py:123
+msgid "Uzbek"
+msgstr "O'zbek"
+
 #: templates/about.html:11 templates/category.html:11 templates/contact.html:12
-#: templates/layouts/base.html:53 templates/layouts/base.html:106
+#: templates/layouts/base.html:71 templates/layouts/base.html:149
 #: templates/single-post.html:11
 msgid "Home"
 msgstr "Bosh sahifa"
@@ -192,31 +215,47 @@ msgstr "Bosh sahifa"
 msgid "Who We Are"
 msgstr "Biz kimmiz"
 
-#: templates/category.html:57
+#: templates/category.html:59
 msgid "Read More"
 msgstr "Ko'proq o'qish"
 
-#: templates/contact.html:34
+#: templates/category.html:252
+msgid "Previous"
+msgstr "Oldingi"
+
+#: templates/category.html:255
+msgid "Page"
+msgstr "Sahifa"
+
+#: templates/category.html:258
+msgid "Next"
+msgstr "Keyingisi"
+
+#: templates/category.html:307
+msgid "Search"
+msgstr "Izlash"
+
+#: templates/contact.html:36
 msgid "Address"
 msgstr "Manzil"
 
-#: templates/contact.html:42
+#: templates/contact.html:47
 msgid "Call Us"
 msgstr "bizga qo'ng'iroq qiling"
 
-#: templates/contact.html:50
+#: templates/contact.html:55
 msgid "Email Us"
 msgstr "bizga elektron pochta orqali yuboring"
 
-#: templates/contact.html:78
+#: templates/contact.html:84
 msgid "Loading"
 msgstr "yuklanmoqda"
 
-#: templates/contact.html:80
+#: templates/contact.html:87
 msgid "Your message has been sent. Thank you!"
 msgstr "Sizning xabaringiz yuborildi. Rahmat!"
 
-#: templates/contact.html:82
+#: templates/contact.html:92
 msgid "Send Message"
 msgstr "Xabar yuborish"
 
@@ -224,61 +263,157 @@ msgstr "Xabar yuborish"
 msgid "Trending"
 msgstr "ko'p ko'rilgan"
 
-#: templates/layouts/base.html:107
+#: templates/layouts/base.html:100 templates/login.html:6
+#: templates/login.html:58 templates/register.html:36
+msgid "Login"
+msgstr "Tizimga kirish"
+
+#: templates/layouts/base.html:101
+msgid "Register"
+msgstr "Roʻyxatdan oʻtish"
+
+#: templates/layouts/base.html:135
+msgid "Phone"
+msgstr "Telefon raqami"
+
+#: templates/layouts/base.html:136
+#, fuzzy
+#| msgid "email"
+msgid "Email"
+msgstr "electron pochta"
+
+#: templates/layouts/base.html:147
+msgid "Useful Links"
+msgstr "Foydali havolalar"
+
+#: templates/layouts/base.html:150
 msgid "About us"
 msgstr "Biz haqimizda"
 
-#: templates/layouts/base.html:108
+#: templates/layouts/base.html:151
 msgid "Terms of service"
 msgstr "xizmat ko'rsatish shartlari"
 
-#: templates/layouts/base.html:109
+#: templates/layouts/base.html:152
 msgid "Privacy policy"
 msgstr "Maxfiylik siyosati"
 
-#: templates/layouts/base.html:114
+#: templates/layouts/base.html:157
 msgid "Our Services"
 msgstr "Bizning xizmatlar"
 
-#: templates/layouts/base.html:116
+#: templates/layouts/base.html:159
 msgid "Web Design"
 msgstr "Web Dizayn"
 
-#: templates/layouts/base.html:117
+#: templates/layouts/base.html:160
 msgid "Web Development"
 msgstr "veb-ishlab chiqish"
 
-#: templates/layouts/base.html:118
+#: templates/layouts/base.html:161
 msgid "Product Management"
 msgstr "Mahsulot boshqaruvi"
 
-#: templates/layouts/base.html:119
+#: templates/layouts/base.html:162
 msgid "Marketing"
 msgstr "Marketing"
 
-#: templates/layouts/base.html:120
+#: templates/layouts/base.html:163
 msgid "Graphic Design"
 msgstr "Grafik dizayn"
 
-#: templates/layouts/base.html:128
+#: templates/layouts/base.html:171
 msgid "Copyright"
 msgstr "Mualliflik huquqi"
 
-#: templates/layouts/base.html:128
+#: templates/layouts/base.html:171
 msgid "All Rights Reserved"
 msgstr "Barcha huquqlar himoyalangan"
-
-#: templates/login.html:6 templates/login.html:58
-msgid "Login"
-msgstr "Tizimga kirish"
 
 #: templates/login.html:37
 msgid "Member Login"
 msgstr "Ro'yxatdan o'tish"
 
-#: templates/login.html:63
+#: templates/login.html:70
 msgid "Create your Account"
 msgstr "Hisobingizni yarating"
+
+#: templates/privacy_policy.html:6
+#, fuzzy
+#| msgid "Privacy policy"
+msgid "Privacy Policy"
+msgstr "Maxfiylik siyosati"
+
+#: templates/privacy_policy.html:8
+msgid "We are committed to protecting the personal information of our users."
+msgstr ""
+"Biz foydalanuvchilarning shaxsiy ma'lumotlarini himoya qilishga sodiqmiz."
+
+#: templates/privacy_policy.html:10
+msgid ""
+"This policy explains what information we collect about you, how we store it, "
+"and for what purposes we use it."
+msgstr ""
+"Ushbu siyosat biz siz haqingizda qanday ma'lumotlarni to'plashimiz, ularni "
+"qanday saqlashimiz va qanday maqsadlarda foydalanishimizni tushuntiradi."
+
+#: templates/privacy_policy.html:12
+msgid "1. Gather information"
+msgstr "1. Ma'lumot"
+
+#: templates/privacy_policy.html:13
+msgid ""
+"We only collect the information you provide when you register or contact us "
+"(name, email, message)."
+msgstr ""
+"Biz faqat ro'yxatdan o'tganingizda yoki biz bilan bog'langaningizda (ism, "
+"elektron pochta, xabar) taqdim etgan ma'lumotlarni yig'amiz."
+
+#: templates/privacy_policy.html:15
+msgid "2. Use of data"
+msgstr "2. Ma'lumotlardan foydalanish"
+
+#: templates/privacy_policy.html:16
+msgid ""
+"This information is used only to improve the quality of service, communicate "
+"with you, and perform statistical analysis."
+msgstr ""
+"Ushbu ma'lumotlar faqat xizmat sifatini yaxshilash, siz bilan muloqot qilish "
+"va statistik tahlilni amalga oshirish uchun ishlatiladi."
+
+#: templates/privacy_policy.html:18
+msgid "3. Data protection"
+msgstr "3. Ma'lumotlarni himoya qilish"
+
+#: templates/privacy_policy.html:19
+msgid ""
+"We do not share your information with third parties and take steps to keep "
+"it secure."
+msgstr ""
+"Biz sizning ma'lumotlaringizni uchinchi shaxslar bilan baham ko'rmaymiz va "
+"ularni xavfsiz saqlash choralarini ko'ramiz."
+
+#: templates/privacy_policy.html:21
+msgid "4. Cookies"
+msgstr "4. Cookie fayllari"
+
+#: templates/privacy_policy.html:22
+msgid ""
+"Our site uses cookies to improve your experience. You can disable them in "
+"your browser settings."
+msgstr ""
+"Saytimiz tajribangizni yaxshilash uchun cookie-fayllardan foydalanadi. Siz "
+"ularni brauzer sozlamalarida o'chirib qo'yishingiz mumkin."
+
+#: templates/privacy_policy.html:24
+msgid "5. Communication"
+msgstr "5. Aloqa"
+
+#: templates/privacy_policy.html:25
+msgid "If you have any questions about our privacy policy, please contact us"
+msgstr ""
+"Maxfiylik siyosatimiz bo'yicha biron bir savolingiz bo'lsa, iltimos, biz "
+"bilan bog'laning"
 
 #: templates/register.html:28
 msgid " I agree to the"
@@ -288,21 +423,115 @@ msgstr "Men roziman"
 msgid "Terms and Conditions"
 msgstr "Foydalanish shartlariga"
 
+#: templates/register.html:35
+msgid "Do you have an account?"
+msgstr "Hisobingiz bormi?"
+
 #: templates/single-post.html:12
 msgid "Single Post"
 msgstr "Post tafsilot"
 
-#: templates/single-post.html:191 templates/single-post.html:197
+#: templates/single-post.html:195 templates/single-post.html:201
 msgid "Post Comment"
 msgstr "Fikr qoldirish"
 
-#: templates/single-post.html:200
+#: templates/single-post.html:196
+msgid "Your email address will not be published. Required fields are marked *"
+msgstr ""
+"Sizning elektron pochta manzilingiz nashr etilmaydi. Majburiy maydonlar * "
+"bilan belgilangan "
+
+#: templates/single-post.html:204
 msgid "login"
 msgstr "tizimga kirish"
 
-#: templates/single-post.html:200
+#: templates/single-post.html:204
 msgid "to comment"
 msgstr "fikr bildirish"
+
+#: templates/terms_of_use.html:6
+#, fuzzy
+#| msgid "Terms of service"
+msgid "Terms of Use"
+msgstr "xizmat ko'rsatish shartlari"
+
+#: templates/terms_of_use.html:9
+msgid "By using this website, you agree to the following terms:"
+msgstr ""
+"Ushbu veb-saytdan foydalanish orqali siz quyidagi shartlarga rozilik "
+"bildirasiz:"
+
+#: templates/terms_of_use.html:11
+msgid "1. Copyright"
+msgstr "1. Mualliflik huquqi"
+
+#: templates/terms_of_use.html:12
+msgid ""
+"All materials on the site are protected by copyright. Unauthorized copying, "
+"distribution, or commercial use of the content is prohibited."
+msgstr ""
+"Saytdagi barcha materiallar mualliflik huquqi bilan himoyalangan. Kontentdan "
+"ruxsatsiz nusxa ko'chirish, tarqatish yoki tijorat maqsadlarida foydalanish "
+"taqiqlanadi."
+
+#: templates/terms_of_use.html:14
+msgid "2. Terms of Use"
+msgstr "2. xizmat ko'rsatish shartlari"
+
+#: templates/terms_of_use.html:15
+msgid ""
+"The user may use the site services only for lawful purposes. The user is "
+"responsible for any illegal or harmful actions."
+msgstr ""
+"Foydalanuvchi sayt xizmatlaridan faqat qonuniy maqsadlarda foydalanishi "
+"mumkin. Foydalanuvchi har qanday noqonuniy yoki zararli harakatlar uchun "
+"javobgardir."
+
+#: templates/terms_of_use.html:17
+msgid "3. Accuracy of data"
+msgstr "3. Ma'lumotlarning aniqligi"
+
+#: templates/terms_of_use.html:18
+msgid ""
+"We strive to keep the information on our site accurate and up-to-date, but "
+"we do not guarantee complete accuracy or currency."
+msgstr ""
+"Saytimizdagi ma'lumotlarning aniq va dolzarb bo'lishiga harakat qilamiz, "
+"ammo to'liq aniqlik yoki dolzarblikni kafolatlamaymiz."
+
+#: templates/terms_of_use.html:20
+msgid "4. Limitation of Liability"
+msgstr "4. Javobgarlikni cheklash"
+
+#: templates/terms_of_use.html:21
+msgid ""
+"The site administration is not responsible for any damage resulting from the "
+"use of the service."
+msgstr ""
+"Sayt ma'muriyati xizmatdan foydalanish natijasida kelib chiqadigan har "
+"qanday zarar uchun javobgar emas."
+
+#: templates/terms_of_use.html:23
+msgid "5. Make changes"
+msgstr "5. O'zgarishlar kiriting"
+
+#: templates/terms_of_use.html:24
+msgid ""
+"The site administration reserves the right to change these terms of use at "
+"any time without prior notice."
+msgstr ""
+"Sayt ma'muriyati ushbu foydalanish shartlarini istalgan vaqtda oldindan "
+"ogohlantirmasdan o'zgartirish huquqini o'zida saqlab qoladi."
+
+#: templates/terms_of_use.html:26
+msgid "6. Communication"
+msgstr "6. Aloqa"
+
+#: templates/terms_of_use.html:27
+msgid "If you have any questions about these terms, please contact us"
+msgstr ""
+"Agar ushbu shartlar bo'yicha biron bir savolingiz bo'lsa, iltimos, biz bilan "
+"bog'laning"
 
 #: venv/lib/python3.10/site-packages/django/contrib/messages/apps.py:16
 msgid "Messages"
@@ -1527,4 +1756,46 @@ msgstr ""
 
 #: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:236
 msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:18
+msgid "password"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:245
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:264
+#, fuzzy
+#| msgid "title"
+msgid "title a"
+msgstr "sarlavha"
+
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:249
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:275
+#, fuzzy
+#| msgid "title"
+msgid "title b"
+msgstr "sarlavha"
+
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:253
+#, fuzzy
+#| msgid "title"
+msgid "title c"
+msgstr "sarlavha"
+
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:257
+#, fuzzy
+#| msgid "title"
+msgid "title d"
+msgstr "sarlavha"
+
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/models.py:380
+msgid "visits"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/modeltranslation/tests/translation.py:62
+msgid "Sorry, translation is not available."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/modeltranslation/widgets.py:32
+msgid "None"
 msgstr ""

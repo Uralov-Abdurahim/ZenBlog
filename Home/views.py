@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.views.generic import ListView
 from Category.models import CategoryModel
 
+def custom_404_view(request, exception):
+    return render(request, '404.html', status=404)
+
 class HomeListView(ListView):
     model = CategoryModel
     template_name = "index.html"
@@ -22,3 +25,12 @@ def privacy_policy(request):
 
 def terms_of_use(request):
     return render(request, 'terms_of_use.html')
+
+
+class TagBlogListView(ListView):
+    model = CategoryModel
+    template_name = "index.html"
+    context_object_name = "tags"
+
+    def get_queryset(self):
+        return CategoryModel.objects.filter(tag__id=self.kwargs['pk']).order_by('-created_at')

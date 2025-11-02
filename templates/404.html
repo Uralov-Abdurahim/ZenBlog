@@ -1,0 +1,22 @@
+{% load i18n %}
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <title>{% trans "Sahifa topilmadi (404)" %}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;text-align:center;padding:40px;background:#f7f7f7}
+    .card{display:inline-block;padding:30px;background:#fff;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
+    a{color:#2b7cff;text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>{% trans "404" %}</h1>
+    <h2>{% trans "Kechirasiz — sahifa topilmadi" %}</h2>
+    <p>{% trans "Siz kiritgan manzil mavjud emas yoki ko‘chirib yuborilgan." %}</p>
+    <p><a href="/">{% trans "Bosh sahifaga qaytish" %}</a></p>
+  </div>
+</body>
+</html>

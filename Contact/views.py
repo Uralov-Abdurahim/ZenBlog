@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from django.views.generic import FormView
+from django.views.generic import FormView, ListView
 from django.urls import reverse_lazy
 from Contact.forms import ContactForm
+from Contact.models import Information
+
 
 class ContactView(FormView):
     template_name = "contact.html"
@@ -15,8 +17,10 @@ class ContactView(FormView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['information'] = Information.objects.all()
         # Agar sessiyada success bo‘lsa, uni contextga qo‘shamiz
         if 'success' in self.request.session:
             context['success'] = True
             del self.request.session['success']  # bir martalik chiqsin
         return context
+    

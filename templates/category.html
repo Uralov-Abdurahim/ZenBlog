@@ -8,7 +8,7 @@
         <h1 class="mb-2 mb-lg-0">{% trans 'Category' %}</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">{% trans 'Home' %}</a></li>
+            <li><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
             <li class="current">{% trans 'Categories' %}</li>
           </ol>
         </nav>
@@ -23,10 +23,10 @@
           <!-- Blog Posts Section -->
           <section id="blog-posts" class="blog-posts section">
 
-            <div class="container">
-              <div class="row gy-4">
+            <div class="container" >
+              <div class="row gy-4" >
               {% for i in categories %}
-                <div class="col-lg-6">
+                <div class="col-lg-6" >
                   <article class="position-relative h-100">
 
                     <div class="post-img position-relative overflow-hidden">
@@ -59,184 +59,14 @@
                       <a href="{% url 'category_detail' i.pk %}" class="readmore stretched-link"><span>{% trans 'Read More' %}</span><i class="bi bi-arrow-right"></i></a>
 
                     </div>
-                  {% endfor %}
+                
                   </article>
                 </div><!-- End post list item -->
+                {% endfor %}
+         
 
-                <div class="col-lg-6">
-                  <article class="position-relative h-100">
-
-                    <div class="post-img position-relative overflow-hidden">
-                      <img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="">
-                      <span class="post-date">March 19</span>
-                    </div>
-
-                    <div class="post-content d-flex flex-column">
-
-                      <!--<h3 class="post-title"></h3>-->
-
-                      <div class="meta d-flex align-items-center">
-                        <div class="d-flex align-items-center">
-                          <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
-                        </div>
-                        <span class="px-3 text-black-50">/</span>
-                        <div class="d-flex align-items-center">
-                          <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
-                        </div>
-                      </div>
-
-                      <p>
-                        Incidunt voluptate sit temporibus aperiam. Quia vitae aut sint ullam quis illum voluptatum et. Quo libero rerum voluptatem pariatur nam.
-                      </p>
-
-                      <hr>
-
-                      <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-                    </div>
-
-                  </article>
-                </div><!-- End post list item -->
-
-                <div class="col-lg-6">
-                  <article class="position-relative h-100">
-
-                    <div class="post-img position-relative overflow-hidden">
-                      <img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="">
-                      <span class="post-date">June 24</span>
-                    </div>
-
-                    <div class="post-content d-flex flex-column">
-
-                      <h3 class="post-title">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</h3>
-
-                      <div class="meta d-flex align-items-center">
-                        <div class="d-flex align-items-center">
-                          <i class="bi bi-person"></i> <span class="ps-2">Maria Doe</span>
-                        </div>
-                        <span class="px-3 text-black-50">/</span>
-                        <div class="d-flex align-items-center">
-                          <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
-                        </div>
-                      </div>
-
-                      <p>
-                        Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et. Eum temporibus fugiat voluptate enim tenetur sunt omnis.
-                      </p>
-
-                      <hr>
-
-                      <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-                    </div>
-
-                  </article>
-                </div><!-- End post list item -->
-
-                <div class="col-lg-6">
-                  <article class="position-relative h-100">
-
-                    <div class="post-img position-relative overflow-hidden">
-                      <img src="assets/img/blog/blog-4.jpg" class="img-fluid" alt="">
-                      <span class="post-date">August 05</span>
-                    </div>
-
-                    <div class="post-content d-flex flex-column">
-
-                      <h3 class="post-title">Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.</h3>
-
-                      <div class="meta d-flex align-items-center">
-                        <div class="d-flex align-items-center">
-                          <i class="bi bi-person"></i> <span class="ps-2">Maria Doe</span>
-                        </div>
-                        <span class="px-3 text-black-50">/</span>
-                        <div class="d-flex align-items-center">
-                          <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
-                        </div>
-                      </div>
-
-                      <p>
-                        Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum enim et autem. Saepe atque cum eligendi eaque iste omnis a qui.
-                      </p>
-
-                      <hr>
-
-                      <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-                    </div>
-
-                  </article>
-                </div><!-- End post list item -->
-
-                <div class="col-lg-6">
-                  <article class="position-relative h-100">
-
-                    <div class="post-img position-relative overflow-hidden">
-                      <img src="assets/img/blog/blog-5.jpg" class="img-fluid" alt="">
-                      <span class="post-date">September 17</span>
-                    </div>
-
-                    <div class="post-content d-flex flex-column">
-
-                      <h3 class="post-title">Accusamus quaerat aliquam qui debitis facilis consequatur</h3>
-
-                      <div class="meta d-flex align-items-center">
-                        <div class="d-flex align-items-center">
-                          <i class="bi bi-person"></i> <span class="ps-2">John Parker</span>
-                        </div>
-                        <span class="px-3 text-black-50">/</span>
-                        <div class="d-flex align-items-center">
-                          <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
-                        </div>
-                      </div>
-
-                      <p>
-                        In itaque assumenda aliquam voluptatem qui temporibus iusto nisi quia. Autem vitae quas aperiam nesciunt mollitia tempora odio omnis. Ipsa odit sit ut amet necessitatibus. Quo ullam ut corrupti autem consequuntur totam dolorem.
-                      </p>
-
-                      <hr>
-
-                      <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-                    </div>
-
-                  </article>
-                </div><!-- End post list item -->
-
-                <div class="col-lg-6">
-                  <article class="position-relative h-100">
-
-                    <div class="post-img position-relative overflow-hidden">
-                      <img src="assets/img/blog/blog-6.jpg" class="img-fluid" alt="">
-                      <span class="post-date">December 07</span>
-                    </div>
-
-                    <div class="post-content d-flex flex-column">
-
-                      <h3 class="post-title">Distinctio provident quibusdam numquam aperiam aut</h3>
-
-                      <div class="meta d-flex align-items-center">
-                        <div class="d-flex align-items-center">
-                          <i class="bi bi-person"></i> <span class="ps-2">Julia White</span>
-                        </div>
-                        <span class="px-3 text-black-50">/</span>
-                        <div class="d-flex align-items-center">
-                          <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
-                        </div>
-                      </div>
-
-                      <p>
-                        Expedita et temporibus eligendi enim molestiae est architecto praesentium dolores. Illo laboriosam officiis quis. Labore officia quia sit voluptatem nisi est dignissimos totam. Et voluptate et consectetur voluptatem id dolor magni impedit. Omnis dolores sit.
-                      </p>
-
-                      <hr>
-
-                      <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-                    </div>
-
-                  </article>
-                </div><!-- End post list item -->
+                  
+            
 
               </div>
             </div>
@@ -249,13 +79,13 @@
             
             <div class="pagination">
               {% if blogs.has_previous %}
-                <a href="?page={{ blogs.previous_page_number }}">Oldingi</a>
+                <a href="?page={{ blogs.previous_page_number }}">{% trans 'Previous' %}</a>
               {% endif %}
             
-              <span>page {{ blogs.number }} / {{ blogs.paginator.num_pages }}</span>
+              <span>{% trans 'Page' %} {{ blogs.number }} / {{ blogs.paginator.num_pages }}</span>
             
               {% if blogs.has_next %}
-                <a href="?page={{ blogs.next_page_number }}">Next</a>
+                <a href="?page={{ blogs.next_page_number }}">{% trans 'Next' %}</a>
               {% endif %}
             </div>
             <!--<div class="container">
@@ -282,7 +112,7 @@
           <div class="widgets-container">
 
             <!-- Blog Author Widget 2 -->
-            <div class="blog-author-widget-2 widget-item">
+           <!-- <div class="blog-author-widget-2 widget-item">
 
               <div class="d-flex flex-column align-items-center">
                 <img src="assets/img/blog/blog-author.jpg" class="rounded-circle flex-shrink-0" alt="">
@@ -299,12 +129,12 @@
                 </p>
 
               </div>
-            </div><!--/Blog Author Widget 2 -->
+            </div>--><!--/Blog Author Widget 2 -->
 
             <!-- Search Widget -->
             <div class="search-widget widget-item">
 
-              <h3 class="widget-title">Search</h3>
+              <h3 class="widget-title">{% trans 'Search' %}</h3>
               <form method="get" action="{% url 'category_list' %}"  class="search-form mb-4">
                 <input type="text" name="q" value="{{ query }}">
                 <button type="submit" title="Search"><i class="bi bi-search"></i></button>
@@ -313,7 +143,7 @@
             </div><!--/Search Widget -->
 
             <!-- Recent Posts Widget -->
-            <div class="recent-posts-widget widget-item">
+           <!-- <div class="recent-posts-widget widget-item">
 
               <h3 class="widget-title">Recent Posts</h3>
 
@@ -323,60 +153,21 @@
                   <h4><a href="blog-details.html">Nihil blanditiis at in nihil autem</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
-              </div><!-- End recent post item-->
+              </div>--><!-- End recent post item-->
 
-              <div class="post-item">
-                <img src="assets/img/blog/blog-recent-2.jpg" alt="" class="flex-shrink-0">
-                <div>
-                  <h4><a href="blog-details.html">Quidem autem et impedit</a></h4>
-                  <time datetime="2020-01-01">Jan 1, 2020</time>
-                </div>
-              </div><!-- End recent post item-->
+              
 
-              <div class="post-item">
-                <img src="assets/img/blog/blog-recent-3.jpg" alt="" class="flex-shrink-0">
-                <div>
-                  <h4><a href="blog-details.html">Id quia et et ut maxime similique occaecati ut</a></h4>
-                  <time datetime="2020-01-01">Jan 1, 2020</time>
-                </div>
-              </div><!-- End recent post item-->
-
-              <div class="post-item">
-                <img src="assets/img/blog/blog-recent-4.jpg" alt="" class="flex-shrink-0">
-                <div>
-                  <h4><a href="blog-details.html">Laborum corporis quo dara net para</a></h4>
-                  <time datetime="2020-01-01">Jan 1, 2020</time>
-                </div>
-              </div><!-- End recent post item-->
-
-              <div class="post-item">
-                <img src="assets/img/blog/blog-recent-5.jpg" alt="" class="flex-shrink-0">
-                <div>
-                  <h4><a href="blog-details.html">Et dolores corrupti quae illo quod dolor</a></h4>
-                  <time datetime="2020-01-01">Jan 1, 2020</time>
-                </div>
-              </div><!-- End recent post item-->
-
-            </div><!--/Recent Posts Widget -->
+            <!--</div>--><!--/Recent Posts Widget -->
 
             <!-- Tags Widget -->
             <div class="tags-widget widget-item">
 
-              {% for category in categories %}
+              
               <h3 class="widget-title">{% trans 'Tags' %}</h3>
+              {% for category in categories %}
               {% for tag in category.tag.all %}
               <ul>
                 <li><a href="{% url 'tag_blogs' tag.pk %}">{{tag.name}}</a></li>
-                <li><a href="#">IT</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Mac</a></li>
-                <li><a href="#">Design</a></li>
-                <li><a href="#">Office</a></li>
-                <li><a href="#">Creative</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Smart</a></li>
-                <li><a href="#">Tips</a></li>
-                <li><a href="#">Marketing</a></li>
               </ul>
               {% endfor %}
               {% endfor %}
