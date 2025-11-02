@@ -21,7 +21,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 #SECRET_KEY = 'django-insecure-54_n087cg_8c2_0b+u%mt^(4nmxgbdk2e$zi%hm8g!v8c)l5uw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['lumera-nkk9.onrender.com']
 
