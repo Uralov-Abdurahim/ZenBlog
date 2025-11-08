@@ -13,7 +13,7 @@ from django.core.wsgi import get_wsgi_application
 
 import sys
 
-project_path = '/home/abdurahim2005/ZenBlog'
+project_path = '/home/Lumera/ZenBlog'
 if project_path not in sys.path:
     sys.path.append(project_path)
 
